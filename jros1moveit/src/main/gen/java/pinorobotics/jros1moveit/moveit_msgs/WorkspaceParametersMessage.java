@@ -25,12 +25,15 @@ import id.xfunction.XJson;
 import java.util.Objects;
 
 /**
- * Definition for moveit_msgs/WorkspaceParameters This message contains a set of parameters useful
- * in # setting up the volume (a box) in which the robot is allowed to move. # This is useful only
- * when planning for mobile parts of # the robot as well.
+ * Definition for moveit_msgs/WorkspaceParameters
+ *
+ * <p>This message contains a set of parameters useful in setting up the volume (a box) in which the
+ * robot is allowed to move. This is useful only when planning for mobile parts of the robot as
+ * well.
  */
 @MessageMetadata(
         name = WorkspaceParametersMessage.NAME,
+        fields = {"header", "min_corner", "max_corner"},
         md5sum = "d639a834e7b1f927e9f1d6c30e920016")
 public class WorkspaceParametersMessage implements Message {
 

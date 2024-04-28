@@ -31,7 +31,24 @@ import java.util.Arrays;
 import java.util.Objects;
 
 /** Definition for moveit_msgs/CollisionObject */
-@MessageMetadata(name = CollisionObjectMessage.NAME, md5sum = "dbba710596087da521c07564160dfccb")
+@MessageMetadata(
+        name = CollisionObjectMessage.NAME,
+        fields = {
+            "header",
+            "pose",
+            "id",
+            "type",
+            "primitives",
+            "primitive_poses",
+            "meshes",
+            "mesh_poses",
+            "planes",
+            "plane_poses",
+            "subframe_names",
+            "subframe_poses",
+            "operation"
+        },
+        md5sum = "dbba710596087da521c07564160dfccb")
 public class CollisionObjectMessage implements Message {
 
     static final String NAME = "moveit_msgs/CollisionObject";
@@ -65,10 +82,8 @@ public class CollisionObjectMessage implements Message {
     public HeaderMessage header = new HeaderMessage();
 
     /**
-     * DISCLAIMER: This field is not in use yet and all other poses are still interpreted in the
-     * header frame. https://github.com/ros-planning/moveit/pull/2037 implements the actual logic
-     * for this field. --- The object's pose relative to the header frame. The shapes and subframe
-     * poses are defined relative to this pose.
+     * The object's pose relative to the header frame. The shapes and subframe poses are defined
+     * relative to this pose.
      */
     public PoseMessage pose = new PoseMessage();
 

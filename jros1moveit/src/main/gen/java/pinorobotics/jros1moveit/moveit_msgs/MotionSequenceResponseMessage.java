@@ -27,7 +27,8 @@ import pinorobotics.jrosmoveit.moveit_msgs.MoveItErrorCodesMessage;
 /** Definition for moveit_msgs/MotionSequenceResponse */
 @MessageMetadata(
         name = MotionSequenceResponseMessage.NAME,
-        md5sum = "3cfbd71b06d8199bf604ebb8d6627be1")
+        fields = {"error_code", "sequence_start", "planned_trajectories", "planning_time"},
+        md5sum = "6c3d81f7909577545c3c382f38a163e2")
 public class MotionSequenceResponseMessage implements Message {
 
     static final String NAME = "moveit_msgs/MotionSequenceResponse";

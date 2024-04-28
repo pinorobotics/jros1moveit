@@ -26,11 +26,22 @@ import id.xfunction.XJson;
 import java.util.Objects;
 
 /**
- * Definition for moveit_msgs/OrientationConstraint This message contains the definition of an
- * orientation constraint.
+ * Definition for moveit_msgs/OrientationConstraint
+ *
+ * <p>This message contains the definition of an orientation constraint.
  */
 @MessageMetadata(
         name = OrientationConstraintMessage.NAME,
+        fields = {
+            "header",
+            "orientation",
+            "link_name",
+            "absolute_x_axis_tolerance",
+            "absolute_y_axis_tolerance",
+            "absolute_z_axis_tolerance",
+            "parameterization",
+            "weight"
+        },
         md5sum = "183479d9281e5b4f23dc584f711d8a64")
 public class OrientationConstraintMessage implements Message {
 

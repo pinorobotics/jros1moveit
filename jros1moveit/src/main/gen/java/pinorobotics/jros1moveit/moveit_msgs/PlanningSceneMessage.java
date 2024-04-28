@@ -30,7 +30,21 @@ import pinorobotics.jrosmoveit.moveit_msgs.LinkScaleMessage;
 import pinorobotics.jrosmoveit.moveit_msgs.ObjectColorMessage;
 
 /** Definition for moveit_msgs/PlanningScene */
-@MessageMetadata(name = PlanningSceneMessage.NAME, md5sum = "acfc50bcfd6c7b978066bfa7c786002c")
+@MessageMetadata(
+        name = PlanningSceneMessage.NAME,
+        fields = {
+            "name",
+            "robot_state",
+            "robot_model_name",
+            "fixed_frame_transforms",
+            "allowed_collision_matrix",
+            "link_padding",
+            "link_scale",
+            "object_colors",
+            "world",
+            "is_diff"
+        },
+        md5sum = "acfc50bcfd6c7b978066bfa7c786002c")
 public class PlanningSceneMessage implements Message {
 
     static final String NAME = "moveit_msgs/PlanningScene";

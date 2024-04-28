@@ -27,6 +27,7 @@ import java.util.Objects;
 /** Definition for moveit_msgs/KinematicSolverInfo */
 @MessageMetadata(
         name = KinematicSolverInfoMessage.NAME,
+        fields = {"joint_names", "limits", "link_names"},
         md5sum = "cc048557c0f9795c392dd80f8bb00489")
 public class KinematicSolverInfoMessage implements Message {
 

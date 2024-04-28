@@ -27,7 +27,18 @@ import java.util.Arrays;
 import java.util.Objects;
 
 /** Definition for moveit_msgs/PlaceLocation */
-@MessageMetadata(name = PlaceLocationMessage.NAME, md5sum = "7b53f032c68481686026c3e9223d0713")
+@MessageMetadata(
+        name = PlaceLocationMessage.NAME,
+        fields = {
+            "id",
+            "post_place_posture",
+            "place_pose",
+            "quality",
+            "pre_place_approach",
+            "post_place_retreat",
+            "allowed_touch_objects"
+        },
+        md5sum = "7b53f032c68481686026c3e9223d0713")
 public class PlaceLocationMessage implements Message {
 
     static final String NAME = "moveit_msgs/PlaceLocation";

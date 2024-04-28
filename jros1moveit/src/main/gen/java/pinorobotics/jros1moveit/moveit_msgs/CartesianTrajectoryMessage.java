@@ -29,6 +29,7 @@ import pinorobotics.jrosmoveit.moveit_msgs.CartesianTrajectoryPointMessage;
 /** Definition for moveit_msgs/CartesianTrajectory */
 @MessageMetadata(
         name = CartesianTrajectoryMessage.NAME,
+        fields = {"header", "tracked_frame", "points"},
         md5sum = "4886769850ce858fcceba546fd5c793b")
 public class CartesianTrajectoryMessage implements Message {
 

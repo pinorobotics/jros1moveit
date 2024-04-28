@@ -26,8 +26,25 @@ import id.xfunction.XJson;
 import java.util.Arrays;
 import java.util.Objects;
 
-/** Definition for moveit_msgs/PositionIKRequest A Position IK request message */
-@MessageMetadata(name = PositionIKRequestMessage.NAME, md5sum = "cb7c3615ee4d29d023dfdc5950af0504")
+/**
+ * Definition for moveit_msgs/PositionIKRequest
+ *
+ * <p>A Position IK request message
+ */
+@MessageMetadata(
+        name = PositionIKRequestMessage.NAME,
+        fields = {
+            "group_name",
+            "robot_state",
+            "constraints",
+            "avoid_collisions",
+            "ik_link_name",
+            "pose_stamped",
+            "ik_link_names",
+            "pose_stamped_vector",
+            "timeout"
+        },
+        md5sum = "cb7c3615ee4d29d023dfdc5950af0504")
 public class PositionIKRequestMessage implements Message {
 
     static final String NAME = "moveit_msgs/PositionIKRequest";

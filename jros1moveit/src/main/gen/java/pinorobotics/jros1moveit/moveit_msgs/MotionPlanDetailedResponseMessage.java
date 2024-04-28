@@ -26,12 +26,21 @@ import java.util.Objects;
 import pinorobotics.jrosmoveit.moveit_msgs.MoveItErrorCodesMessage;
 
 /**
- * Definition for moveit_msgs/MotionPlanDetailedResponse The representation of a solution to a
- * planning problem, including intermediate data
+ * Definition for moveit_msgs/MotionPlanDetailedResponse
+ *
+ * <p>The representation of a solution to a planning problem, including intermediate data
  */
 @MessageMetadata(
         name = MotionPlanDetailedResponseMessage.NAME,
-        md5sum = "24ca49329688ccb45f3f1e82de532220")
+        fields = {
+            "trajectory_start",
+            "group_name",
+            "trajectory",
+            "description",
+            "processing_time",
+            "error_code"
+        },
+        md5sum = "af67c260a61067b3866c6bbc624021cc")
 public class MotionPlanDetailedResponseMessage implements Message {
 
     static final String NAME = "moveit_msgs/MotionPlanDetailedResponse";

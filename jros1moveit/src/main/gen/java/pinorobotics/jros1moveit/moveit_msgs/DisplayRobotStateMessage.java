@@ -25,7 +25,10 @@ import java.util.Objects;
 import pinorobotics.jrosmoveit.moveit_msgs.ObjectColorMessage;
 
 /** Definition for moveit_msgs/DisplayRobotState */
-@MessageMetadata(name = DisplayRobotStateMessage.NAME, md5sum = "61c4e677a6fbbc83f0d5d9df2be85e3c")
+@MessageMetadata(
+        name = DisplayRobotStateMessage.NAME,
+        fields = {"state", "highlight_links", "hide"},
+        md5sum = "61c4e677a6fbbc83f0d5d9df2be85e3c")
 public class DisplayRobotStateMessage implements Message {
 
     static final String NAME = "moveit_msgs/DisplayRobotState";

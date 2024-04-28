@@ -26,8 +26,15 @@ import id.xfunction.XJson;
 import java.util.Arrays;
 import java.util.Objects;
 
-/** Definition for moveit_msgs/BoundingVolume Define a volume in 3D */
-@MessageMetadata(name = BoundingVolumeMessage.NAME, md5sum = "22db94010f39e9198032cb4a1aeda26e")
+/**
+ * Definition for moveit_msgs/BoundingVolume
+ *
+ * <p>Define a volume in 3D
+ */
+@MessageMetadata(
+        name = BoundingVolumeMessage.NAME,
+        fields = {"primitives", "primitive_poses", "meshes", "mesh_poses"},
+        md5sum = "22db94010f39e9198032cb4a1aeda26e")
 public class BoundingVolumeMessage implements Message {
 
     static final String NAME = "moveit_msgs/BoundingVolume";

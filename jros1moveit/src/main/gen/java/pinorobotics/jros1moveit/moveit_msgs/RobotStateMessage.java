@@ -26,7 +26,10 @@ import java.util.Arrays;
 import java.util.Objects;
 
 /** Definition for moveit_msgs/RobotState */
-@MessageMetadata(name = RobotStateMessage.NAME, md5sum = "968156f4aa4cb4018f1f2293eebcea8f")
+@MessageMetadata(
+        name = RobotStateMessage.NAME,
+        fields = {"joint_state", "multi_dof_joint_state", "attached_collision_objects", "is_diff"},
+        md5sum = "968156f4aa4cb4018f1f2293eebcea8f")
 public class RobotStateMessage implements Message {
 
     static final String NAME = "moveit_msgs/RobotState";

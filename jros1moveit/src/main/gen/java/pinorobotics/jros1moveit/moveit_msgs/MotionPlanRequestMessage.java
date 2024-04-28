@@ -26,10 +26,31 @@ import java.util.Arrays;
 import java.util.Objects;
 
 /**
- * Definition for moveit_msgs/MotionPlanRequest This service contains the definition for a request
- * to the motion # planner and the output it provides
+ * Definition for moveit_msgs/MotionPlanRequest
+ *
+ * <p>This service contains the definition for a request to the motion planner and the output it
+ * provides
  */
-@MessageMetadata(name = MotionPlanRequestMessage.NAME, md5sum = "9544d5f3b9cf69a0e1e7f8c75d87f54b")
+@MessageMetadata(
+        name = MotionPlanRequestMessage.NAME,
+        fields = {
+            "workspace_parameters",
+            "start_state",
+            "goal_constraints",
+            "path_constraints",
+            "trajectory_constraints",
+            "reference_trajectories",
+            "pipeline_id",
+            "planner_id",
+            "group_name",
+            "num_planning_attempts",
+            "allowed_planning_time",
+            "max_velocity_scaling_factor",
+            "max_acceleration_scaling_factor",
+            "cartesian_speed_limited_link",
+            "max_cartesian_speed"
+        },
+        md5sum = "83f3d7b1d47a538f7659e0de9dae7980")
 public class MotionPlanRequestMessage implements Message {
 
     static final String NAME = "moveit_msgs/MotionPlanRequest";
@@ -98,11 +119,11 @@ public class MotionPlanRequestMessage implements Message {
     public double max_acceleration_scaling_factor;
 
     /**
-     * Maximum cartesian speed for the given end effector. If max_cartesian_speed less or equal to 0
-     * the trajectory is not modified. These fields require the following planning request adapter:
-     * default_planner_request_adapters/SetMaxCartesianEndEffectorSpeed
+     * Maximum cartesian speed for the given link. If max_cartesian_speed <= 0 the trajectory is not
+     * modified. These fields require the following planning request adapter:
+     * default_planner_request_adapters/LimitMaxCartesianLinkSpeed
      */
-    public StringMessage cartesian_speed_end_effector_link = new StringMessage();
+    public StringMessage cartesian_speed_limited_link = new StringMessage();
 
     /** m/s */
     public double max_cartesian_speed;
@@ -177,9 +198,9 @@ public class MotionPlanRequestMessage implements Message {
         return this;
     }
 
-    public MotionPlanRequestMessage withCartesianSpeedEndEffectorLink(
-            StringMessage cartesian_speed_end_effector_link) {
-        this.cartesian_speed_end_effector_link = cartesian_speed_end_effector_link;
+    public MotionPlanRequestMessage withCartesianSpeedLimitedLink(
+            StringMessage cartesian_speed_limited_link) {
+        this.cartesian_speed_limited_link = cartesian_speed_limited_link;
         return this;
     }
 
@@ -204,7 +225,7 @@ public class MotionPlanRequestMessage implements Message {
                 allowed_planning_time,
                 max_velocity_scaling_factor,
                 max_acceleration_scaling_factor,
-                cartesian_speed_end_effector_link,
+                cartesian_speed_limited_link,
                 max_cartesian_speed);
     }
 
@@ -224,8 +245,7 @@ public class MotionPlanRequestMessage implements Message {
                 && allowed_planning_time == other.allowed_planning_time
                 && max_velocity_scaling_factor == other.max_velocity_scaling_factor
                 && max_acceleration_scaling_factor == other.max_acceleration_scaling_factor
-                && Objects.equals(
-                        cartesian_speed_end_effector_link, other.cartesian_speed_end_effector_link)
+                && Objects.equals(cartesian_speed_limited_link, other.cartesian_speed_limited_link)
                 && max_cartesian_speed == other.max_cartesian_speed;
     }
 
@@ -245,7 +265,7 @@ public class MotionPlanRequestMessage implements Message {
                 "allowed_planning_time", allowed_planning_time,
                 "max_velocity_scaling_factor", max_velocity_scaling_factor,
                 "max_acceleration_scaling_factor", max_acceleration_scaling_factor,
-                "cartesian_speed_end_effector_link", cartesian_speed_end_effector_link,
+                "cartesian_speed_limited_link", cartesian_speed_limited_link,
                 "max_cartesian_speed", max_cartesian_speed);
     }
 }

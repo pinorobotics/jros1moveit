@@ -26,7 +26,7 @@ import java.util.Objects;
 /** Definition for moveit_msgs/MotionSequenceRequest */
 @MessageMetadata(
         name = MotionSequenceRequestMessage.NAME,
-        md5sum = "d6e6d4da3bede363f50e4ffbac7629a0")
+        md5sum = "5a79e4928bfada4fbc57882982ac6e58")
 public class MotionSequenceRequestMessage implements Message {
 
     static final String NAME = "moveit_msgs/MotionSequenceRequest";

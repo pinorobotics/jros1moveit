@@ -25,7 +25,10 @@ import java.util.Arrays;
 import java.util.Objects;
 
 /** Definition for moveit_msgs/PlanningSceneWorld */
-@MessageMetadata(name = PlanningSceneWorldMessage.NAME, md5sum = "79457311445f53d410ab4e3781de8447")
+@MessageMetadata(
+        name = PlanningSceneWorldMessage.NAME,
+        fields = {"collision_objects", "octomap"},
+        md5sum = "79457311445f53d410ab4e3781de8447")
 public class PlanningSceneWorldMessage implements Message {
 
     static final String NAME = "moveit_msgs/PlanningSceneWorld";

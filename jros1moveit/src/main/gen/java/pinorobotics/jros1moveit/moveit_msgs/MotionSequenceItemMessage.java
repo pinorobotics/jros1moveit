@@ -23,7 +23,10 @@ import id.xfunction.XJson;
 import java.util.Objects;
 
 /** Definition for moveit_msgs/MotionSequenceItem */
-@MessageMetadata(name = MotionSequenceItemMessage.NAME, md5sum = "2d640cc6ec9b15fdbde900aedc333486")
+@MessageMetadata(
+        name = MotionSequenceItemMessage.NAME,
+        fields = {"req", "blend_radius"},
+        md5sum = "605a152161827d49a0abacf6c6544d1e")
 public class MotionSequenceItemMessage implements Message {
 
     static final String NAME = "moveit_msgs/MotionSequenceItem";

@@ -24,7 +24,19 @@ import id.xfunction.XJson;
 import java.util.Objects;
 
 /** Definition for moveit_msgs/PlanningOptions */
-@MessageMetadata(name = PlanningOptionsMessage.NAME, md5sum = "3134e041c806c7c2ff59948db4d57835")
+@MessageMetadata(
+        name = PlanningOptionsMessage.NAME,
+        fields = {
+            "planning_scene_diff",
+            "plan_only",
+            "look_around",
+            "look_around_attempts",
+            "max_safe_execution_cost",
+            "replan",
+            "replan_attempts",
+            "replan_delay"
+        },
+        md5sum = "3134e041c806c7c2ff59948db4d57835")
 public class PlanningOptionsMessage implements Message {
 
     static final String NAME = "moveit_msgs/PlanningOptions";

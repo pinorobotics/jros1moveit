@@ -24,7 +24,19 @@ import id.xfunction.XJson;
 import java.util.Objects;
 
 /** Definition for moveit_msgs/JointLimits */
-@MessageMetadata(name = JointLimitsMessage.NAME, md5sum = "8ca618c7329ea46142cbc864a2efe856")
+@MessageMetadata(
+        name = JointLimitsMessage.NAME,
+        fields = {
+            "joint_name",
+            "has_position_limits",
+            "min_position",
+            "max_position",
+            "has_velocity_limits",
+            "max_velocity",
+            "has_acceleration_limits",
+            "max_acceleration"
+        },
+        md5sum = "8ca618c7329ea46142cbc864a2efe856")
 public class JointLimitsMessage implements Message {
 
     static final String NAME = "moveit_msgs/JointLimits";
