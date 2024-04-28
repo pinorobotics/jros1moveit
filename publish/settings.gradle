@@ -1,4 +1,3 @@
 // list of subprojects to publish to Sonatype repo
 
-include 'jros1moveit'
-project(':jros1moveit').projectDir = new File(rootDir, '../jros1moveit')
+include "${zzName}"
