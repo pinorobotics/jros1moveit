@@ -9,6 +9,8 @@ open module jros1moveit.tests {
     requires id.xfunction;
     requires org.junit.jupiter.api;
     requires jros1tf2;
+    requires jros1messages;
+    requires jrosmessages.tests;
 
     exports pinorobotics.jros1moveit.tests;
 }
