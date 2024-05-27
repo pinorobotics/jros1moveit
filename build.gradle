@@ -41,6 +41,10 @@ subprojects {
         // Use Android style which has 4 whitespaces instead 2 by default
         googleJavaFormat().aosp().reflowLongStrings()
 
+        // Do not format code in any of the examples because it becomes
+        // unusable in jshell
+        targetExclude "**/examples/**"
+
         licenseHeader '''/*
  * Copyright $YEAR %s project
  * 

@@ -8,7 +8,13 @@ Install Panda:
 apt install ros-noetic-panda-moveit-config
 ```
 
-Use following command to run it:
+Start TF2 Buffer Server:
+
+``` bash
+rosrun tf2_ros buffer_server
+```
+
+Use following command to run Panda:
 
 ``` bash
 roslaunch panda_moveit_config demo.launch
@@ -18,12 +24,6 @@ If it fails [apply fix](https://answers.ros.org/question/384900/failed-to-lunch-
 
 ```
 <param if="$(eval arg('load_robot_description') and arg('load_gripper'))" name="$(arg robot_description)" command="$(find xacro)/xacro '$(find franka_description)/robots/panda_arm.urdf.xacro' hand:=true"/>
-```
-
-After that you need start TF2 Buffer Server:
-
-``` bash
-rosrun tf2_ros buffer_server
 ```
 
 In RViz subscribe to "/visualization_marker_array".
