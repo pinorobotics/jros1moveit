@@ -46,7 +46,7 @@ subprojects {
         targetExclude "**/examples/**"
 
         licenseHeader '''/*
- * Copyright $YEAR %s project
+ * Copyright $YEAR %s
  * 
  * Website: https://github.com/%s/%s
  * 
